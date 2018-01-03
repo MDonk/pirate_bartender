@@ -27,9 +27,10 @@ def drink(preferences):
     for key, value in preferences.items():
         if value is True:
             drink_it.append(random.choice(ingredients[key]))
-    print(drink_it)
     return drink_it
 
 if __name__ == '__main__':
-    style()
-    drink(preferences)
+    output = style()
+    drink(output)
+    answer = drink(output)
+    print("Your drink will contain:", answer)
